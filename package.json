@@ -6,9 +6,8 @@
     "email": "samchon@samchon.org",
     "url": "http://samchon.org"
   },
-  "version": "2.4.6",
-  "main": "./index.js",
-  "typings": "./index.d.ts",
+  "version": "3.0.0-dev.20200510",
+  "main": "./index.ts",
   "scripts": {
     "api": "typedoc src --exclude \"**/+(test|benchmark)/**\" --excludeNotDocumented --plugin typedoc-plugin-external-module-name --plugin typedoc-plugin-exclude-references --out ../tstl.pages/api",
     "migration": "ts-node build/migration",

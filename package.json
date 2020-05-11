@@ -6,21 +6,19 @@
     "email": "samchon@samchon.org",
     "url": "http://samchon.org"
   },
-  "version": "3.0.0-dev.20200510",
-  "main": "./index.ts",
+  "version": "3.0.0-dev.20200511",
+  "main": "./index.js",
+  "typings": "./index.ts",
   "scripts": {
-    "api": "typedoc src --exclude \"**/+(test|benchmark)/**\" --excludeNotDocumented --plugin typedoc-plugin-external-module-name --plugin typedoc-plugin-exclude-references --out ../tstl.pages/api",
-    "migration": "ts-node build/migration",
+    "api": "typedoc . --exclude \"**/+(test|benchmark|node_modules)/**\" --excludeNotDocumented --plugin typedoc-plugin-external-module-name --plugin typedoc-plugin-exclude-references --out ../tstl.pages/api",
     "benchmark": "node benchmark",
     "build": "npm run clean && npm run module && npm run compile && npm run dist && npm run test",
-    "clean": "ts-node build/clean",
     "compile": "tsc",
     "dev": "tsc --watch",
-    "dist": "ts-node build/dist",
     "module": "tsc --noEmit --module amd && tsc --noEmit --module system && tsc --noEmit --module umd && tsc --noEmit --module esnext",
     "module:dev": "tsc --watch --noEmit --module esnext",
-    "test": "node dist/test",
-    "test:ts": "ts-node src/test"
+    "test": "node test",
+    "test:ts": "ts-node test"
   },
   "devDependencies": {
     "@types/cli": "^0.11.19",

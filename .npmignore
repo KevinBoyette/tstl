@@ -5,9 +5,5 @@ node_modules/
 
 test/
 benchmark/
-*.js
-*.d.ts
-.js.map
-*.d.ts.map
 
 tsconfig.json
